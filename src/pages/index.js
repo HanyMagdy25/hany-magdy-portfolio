@@ -15,7 +15,7 @@ export default function Home() {
         <title>Hany Magdy</title>
         <meta name="description" content="Hany Magdy - Frontend Developer" />
       </Head>
-      <main className="flex items-center text-dark w-full min-h-screen">
+      <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0">
           <div className="flex justify-center items-center w-full">
             <div className="w-1/2">
@@ -43,7 +43,9 @@ export default function Home() {
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg
                   text-lg font-semibold hover:bg-light hover:text-dark border-2
-                  border-solid border-transparent hover:border-dark transition duration-300"
+                  border-solid border-transparent hover:border-dark transition
+                  duration-300 dark:bg-light dark:text-dark hover:dark:bg-dark 
+                hover:dark:text-light hover:dark:border-light"
                   download={true}
                 >
                   Resume <LinkArrow className={"w-6 ml-1"} />
@@ -51,9 +53,8 @@ export default function Home() {
                 <Link
                   href="mailto:hany.magdy25@gmail.com"
                   target={"_blank"}
-                  className="flex items-center p-2.5 px-6 rounded-lg
-                  text-lg font-semibold bg-light text-dark border-2
-                  border-solid border-transparent border-dark ml-4"
+                  className="ml-4 text-lg font-medium items-center
+                   text-dark dark:text-light "
                 >
                   Contact
                 </Link>
