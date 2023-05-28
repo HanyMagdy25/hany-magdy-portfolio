@@ -3,7 +3,6 @@ import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
 import { motion } from "framer-motion";
 import { myWorks } from "@/utils/data";
 import { useState } from "react";
@@ -74,7 +73,7 @@ const Project = ({ type, title, img, link }) => {
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image src={img} alt={title} className="w-full h-auto" />
+        <Image priority src={img} alt={title} className="w-full h-auto" />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
         <span className="text-primary font-medium text-xl dark:text-primaryDark">
@@ -88,16 +87,31 @@ const Project = ({ type, title, img, link }) => {
           <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
         </Link>
         <div className="w-full mt-2 flex items-center justify-between">
+         
           <Link
             href={link}
             target="_blank"
-            className="text-lg font-semibold underline"
+            
           >
-            Visit
+            <button className="group flex w-full dark:text-dark dark:bg-light items-center justify-center rounded-md bg-dark px-5 py-3 text-white transition sm:mt-0 sm:w-auto ">
+            <span className="text-sm font-medium"> Visit </span>
+            <svg
+              className="group-hover:translate-x-2 ml-3 h-5 w-5 transition-all"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </button>
           </Link>
-          {/* <Link href={github} target="_blank" className="w-10">
-            <GithubIcon />
-          </Link> */}
+          
         </div>
       </div>
     </article>
@@ -125,15 +139,12 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>CodeBucks I Projects Page</title>
-        <meta name="description" content="any description" />
+        <title>Projects | Hany Magdy</title>
+        <meta name="description" content="Projects | Hany Magdy" />
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText
-            text="Imagination Trumps Knowledge!"
-            className="mb-16"
-          />
+          <AnimatedText text="My Projects" className="mb-16" />
 
           <div className="flex mb-10 gap-5 flex-wrap">
             {[
@@ -152,7 +163,7 @@ const Projects = () => {
             ].map((item, index) => (
               <button
                 onClick={() => handleWorkFilter(item)}
-                class={` text-dark  border-solid border
+                className={` text-dark  border-solid border
                    border-dark dark:border-light flex items-center justify-center 
                   rounded-md px-5 py-2.5 text-center text-sm font-medium 
                 hover:scale-105 transition duration-300
@@ -183,11 +194,7 @@ const Projects = () => {
             </div> */}
             {filterWork?.length === 0 ? (
               <div className="col-span-12">
-
-              <AnimatedText
-              text="Imagination "
-              className="mb-5 text-xl"
-              />
+                <AnimatedText text="Imagination " className="mb-5 text-xl" />
               </div>
             ) : (
               <>
@@ -197,7 +204,7 @@ const Projects = () => {
                       title={item.title}
                       link={item.projectLink}
                       type="Featured Project"
-                      img={project1}
+                      img={item.imgUrl}
                     />
                   </div>
                 ))}

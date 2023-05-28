@@ -17,14 +17,14 @@ const Footer = () => {
           </span>
           by&nbsp;
           <Link
-            href="https://www.google.com/"
+            href="https://www.facebook.com/hany.magdy25"
             className="underline underline-offset-2"
             target={"_blank"}
           >
             Hany
           </Link>
         </div>
-        <Link href="/https://www.google.com/" target={"_blank"}>
+        <Link href="https://www.facebook.com/hany.magdy25" target={"_blank"}>
           Say Hello
         </Link>
       </Layout>
