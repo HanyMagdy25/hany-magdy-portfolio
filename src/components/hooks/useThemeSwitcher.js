@@ -6,9 +6,11 @@ const useThemeSwitcher = () => {
   useEffect(() => {
     const mediaQuery = window.matchMedia(preferDarkQuery);
     const userPref = window.localStorage.getItem("theme");
+  
     const handleChange = () => {
+      let check
       if (userPref) {
-        let check = userPref === "dark" ? "dark" : "light";
+         check = userPref === "dark" ? "dark" : "light";
         setMode(check);
         if (check === "dark") {
           document.documentElement.classList.add("dark");
@@ -16,15 +18,20 @@ const useThemeSwitcher = () => {
           document.documentElement.classList.remove("dark");
         }
       } else {
-        let check = mediaQuery.matches ? "dark" : "light";
+         check = mediaQuery.matches ? "dark" : "light";
         setMode(check);
+        window.localStorage.setItem("theme", check);
         if (check === "dark") {
           document.documentElement.classList.add("dark");
         } else {
           document.documentElement.classList.remove("dark");
         }
       }
+      setMode(check);
+      document.documentElement.classList.toggle("dark", check === "dark");
     };
+
+    handleChange();
 
     mediaQuery.addEventListener("change", handleChange);
     return () => mediaQuery.removeEventListener("change", handleChange);
@@ -34,11 +41,21 @@ const useThemeSwitcher = () => {
     if (mode === "dark") {
       window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
-    } else {
+    }
+     if (mode === "light"){
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
   }, [mode]);
+
+  // useEffect(() => {
+  //   if (mode === "dark" || mode === "light") { // Add this condition
+  //     window.localStorage.setItem("theme", mode);
+  //   }
+
+  //   document.documentElement.classList.toggle("dark", mode === "dark");
+  // }, [mode]);
+  
 
   return [mode, setMode];
 };

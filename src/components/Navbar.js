@@ -3,11 +3,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import {
-  DribbbleIcon,
   GithubIcon,
   LinkedInIcon,
   MoonIcon,
-  PinterestIcon,
   SunIcon,
   TwitterIcon,
 } from "./Icons";
@@ -42,12 +40,11 @@ const Navbar = () => {
         <CustomLink href="/" title="Home" className="mr-4" />
         <CustomLink href="/about" title="About" className="mx-4" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
-        <CustomLink href="/articles" title="Articles" className="ml-4" />
       </nav>
       <Logo />
       <nav className="flex items-center justify-center flex-wrap">
         <motion.a
-          href="https://www.google.com/"
+          href="https://twitter.com/hanymagdyjr"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -56,7 +53,7 @@ const Navbar = () => {
           <TwitterIcon />
         </motion.a>
         <motion.a
-          href="https://www.google.com/"
+          href="https://github.com/HanyMagdy25"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -65,7 +62,7 @@ const Navbar = () => {
           <GithubIcon />
         </motion.a>
         <motion.a
-          href="https://www.google.com/"
+          href="https://www.linkedin.com/in/hany-magdy-7a0ab4175/"
           target={"_blank"}
           whileHover={{ y: -2 }}
           whileTap={{ scale: 0.9 }}
@@ -73,24 +70,8 @@ const Navbar = () => {
         >
           <LinkedInIcon />
         </motion.a>
-        <motion.a
-          href="https://www.google.com/"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 mx-3"
-        >
-          <PinterestIcon />
-        </motion.a>
-        <motion.a
-          href="https://www.google.com/"
-          target={"_blank"}
-          whileHover={{ y: -2 }}
-          whileTap={{ scale: 0.9 }}
-          className="w-6 ml-3"
-        >
-          <DribbbleIcon />
-        </motion.a>
+
+
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}
           className={`ml-3 flex items-center justify-center rounded-full p-1 
