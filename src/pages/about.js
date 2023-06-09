@@ -36,17 +36,7 @@ const about = () => {
     <>
       <Head>
         <title>Hany Magdy | About</title>
-        <meta
-          name="description"
-          content="I am a passionate and experienced Front-End Developer with a strong focus
-              on React JS and Next JS. With two years of hands-on experience in front-end 
-              development, I am seeking a challenging opportunity in a reputable company that
-                will allow me to further enhance my knowledge, skills, and experience.
-                I am driven by my dedication to delivering high-quality user experiences 
-                and continuously improving my technical expertise. I am excited to contribute 
-                my expertise to a dynamic team and contribute to the success of innovative 
-                web projects."
-        />
+        <meta name="description" content="any description" />
       </Head>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
@@ -60,21 +50,23 @@ const about = () => {
                 Biograpghy
               </h2>
               <p className="my-4 font-medium">
-                Hi, Im Hany, I am a passionate and experienced Front-End
-                Developer with a strong focus on React JS and Next JS. With two
-                years of hands-on experience in front-end development, I am
-                seeking a challenging opportunity in a reputable company that
-                will allow me to further enhance my knowledge, skills, and
-                experience. I am driven by my dedication to delivering
-                high-quality user experiences and continuously improving my
-                technical expertise. I am excited to contribute my expertise to
-                a dynamic team and contribute to the success of innovative web
-                projects.
+                Hi, Im Hany, a frontend developer with a
+                passion for creating beautiful, functional, and user-centered
+                digital experiences. With 4 years of experience in the field. I
+                am always looking for new and innovative ways to bring my
+                clients visions to life.
               </p>
               <p className="my-4 font-medium">
                 I believe that design is about more than just making things look
                 pretty , its about solving problems and creating intuitive,
                 enjoyable experiences for users.
+              </p>
+              <p className="my-4 font-medium">
+                Whether Im working on a website, mobile app, or other digital
+                product, I bring my commitment to design excellence and
+                user-centered thinking to every project I work on. I look
+                forward to the opportunity to bring my skills and passion to
+                your next project.
               </p>
             </div>
 
@@ -94,7 +86,9 @@ const about = () => {
               />
             </div>
 
-            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row  xl:items-center md:order-3">
+            <div
+              className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row  xl:items-center md:order-3"
+            >
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
                   <AnimatedNumbers value={50} />+
