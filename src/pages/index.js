@@ -6,6 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import profileImg from "../../public/images/profile/developer-pic-1.png";
+import TransitionEffect from "@/components/TransitionEffect";
 // import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 // import lightBulb from "../../public/images/svgs/lightBulb.png";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <title>Hany Magdy</title>
         <meta name="description" content="Hany Magdy - Frontend Developer" />
       </Head>
+      <TransitionEffect/>
       <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0 md:pt-16 sm:pt-8">
           <div className="flex justify-center items-center w-full lg:flex-col">

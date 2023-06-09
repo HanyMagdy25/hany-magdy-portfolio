@@ -6,18 +6,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { myWorks } from "@/utils/data";
 import { useState } from "react";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   return (
-    <article
-      className="relative flex w-full items-center justify-between 
-    rounded-3xl rounded-br-2xl border border-solid border-dark
-     bg-light p-12 shadow-2xl dark:bg-dark dark:border-light"
-    >
-      <div
-        className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%]
-        rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light "
-      />
+    <article className="relative flex w-full items-center  justify-between rounded-3xl rounded-br-2xl border border-solid border-dark bg-light p-12 shadow-2xl  dark:border-light dark:bg-dark  lg:flex-col  lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4  ">
+      <div className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%] rounded-[2.5rem] rounded-br-3xl bg-dark dark:bg-light  xs:-right-2 xs:h-[102%] xs:w-[100%] xs:rounded-[1.5rem] " />
       <Link
         href={link}
         target="_blank"
@@ -59,32 +53,32 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, img, link }) => {
   return (
-    <article
-      className="relative flex flex-col w-full items-center justify-between 
-    rounded-2xl border border-solid border-dark bg-light p-6 dark:bg-dark 
-    dark:border-light "
-    >
-      <div
-        className="absolute top-0 -right-3 -z-10 h-[103%] w-[101%]
-        rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light "
-      />
+    <article className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl  border  border-solid  border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-dark  xs:p-4 ">
+      <div className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light  md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]  " />
       <Link
         href={link}
         target="_blank"
         className="w-full cursor-pointer overflow-hidden rounded-lg"
       >
-        <Image priority src={img} alt={title} className="w-full h-auto" />
+        <Image
+          priority
+          src={img}
+          alt={title}
+          className="w-full cursor-pointer overflow-hidden rounded-lg"
+        />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-primary font-medium text-xl dark:text-primaryDark">
+        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
           {type}
         </span>
         <Link
           href={link}
           target="_blank"
-          className="hover:underline underline-offset-2"
+          className="underline-offset-2 hover:underline"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
+            {title}
+          </h2>
         </Link>
         <div className="w-full mt-2 flex items-center justify-between">
           <Link href={link} target="_blank">
@@ -134,12 +128,16 @@ const Projects = () => {
   return (
     <>
       <Head>
-        <title>Projects | Hany Magdy</title>
+        <title>Hany Magdy | Projects</title>
         <meta name="description" content="Projects | Hany Magdy" />
       </Head>
+      <TransitionEffect />
       <main className="w-full mb-16 flex flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText text="My Projects" className="mb-16" />
+          <AnimatedText
+            text="My Projects"
+            className="mb-16 lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+          />
 
           <div className="flex mb-10 gap-5 flex-wrap">
             {[
@@ -175,7 +173,7 @@ const Projects = () => {
           </div>
 
           <motion.div
-            className="grid grid-cols-12 gap-20 gap-y-20"
+            className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
             animate={animateCard}
             transition={{ duration: 0.5, delayChildren: 0.5 }}
             exit={{ y: 0, opacity: 0 }}
@@ -199,7 +197,7 @@ const Projects = () => {
             ) : (
               <>
                 {filterWork.map((item) => (
-                  <div key={item.id} className="col-span-6">
+                  <div key={item.id} className="col-span-6 sm:col-span-12">
                     <Project
                       title={item.title}
                       link={item.projectLink}
@@ -210,15 +208,6 @@ const Projects = () => {
                 ))}
               </>
             )}
-
-            {/* <div className="col-span-6">
-              <Project
-                title="Crypto Screener Application"
-                link="/dd"
-                type="Featured Project"
-                img={project1}
-              />
-            </div> */}
           </motion.div>
         </Layout>
       </main>

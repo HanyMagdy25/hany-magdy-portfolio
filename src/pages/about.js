@@ -8,6 +8,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import profileImage from "../../assets/newprofile.jpeg";
 import Education from "@/components/Education";
+import TransitionEffect from "@/components/TransitionEffect";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -36,8 +37,9 @@ const about = () => {
     <>
       <Head>
         <title>Hany Magdy | About</title>
-        <meta name="description" content="any description" />
+        <meta name="description" content="Hany Magdy - Frontend Developer" />
       </Head>
+      <TransitionEffect/>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
           <AnimatedText

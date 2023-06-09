@@ -45,10 +45,10 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
           <Details
-            type="Master Of Computer Science"
-            time="2020-2022"
-            place="Stanford University"
-            info="Completed a master's project on deep learning, developing a new neural network architecture for natural language understanding."
+            type="Computer Science"
+            time="2017-2021"
+            place="Mansoura University"
+            info="Bachelor degree In Computer Science."
           />
         </ul>
       </div>
