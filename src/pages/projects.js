@@ -87,31 +87,25 @@ const Project = ({ type, title, img, link }) => {
           <h2 className="my-2 w-full text-left text-3xl font-bold">{title}</h2>
         </Link>
         <div className="w-full mt-2 flex items-center justify-between">
-         
-          <Link
-            href={link}
-            target="_blank"
-            
-          >
+          <Link href={link} target="_blank">
             <button className="group flex w-full dark:text-dark dark:bg-light items-center justify-center rounded-md bg-dark px-5 py-3 text-white transition sm:mt-0 sm:w-auto ">
-            <span className="text-sm font-medium"> Visit </span>
-            <svg
-              className="group-hover:translate-x-2 ml-3 h-5 w-5 transition-all"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </button>
+              <span className="text-sm font-medium"> Visit </span>
+              <svg
+                className="group-hover:translate-x-2 ml-3 h-5 w-5 transition-all"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </button>
           </Link>
-          
         </div>
       </div>
     </article>
@@ -120,13 +114,14 @@ const Project = ({ type, title, img, link }) => {
 const Projects = () => {
   const [filterWork, setFilterWork] = useState(myWorks);
   const [activeFilter, setActiveFilter] = useState("All");
+  const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
-    // setAnimateCard([{ y: 100, opacity: 0 }]);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
 
     setTimeout(() => {
-      // setAnimateCard([{ y: 0, opacity: 1 }]);
+      setAnimateCard([{ y: 0, opacity: 1 }]);
 
       if (item === "All") {
         setFilterWork(myWorks);
@@ -179,7 +174,12 @@ const Projects = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-12 gap-24 gap-y-32">
+          <motion.div
+            className="grid grid-cols-12 gap-20 gap-y-20"
+            animate={animateCard}
+            transition={{ duration: 0.5, delayChildren: 0.5 }}
+            exit={{ y: 0, opacity: 0 }}
+          >
             {/* <div className="col-span-12">
               <FeaturedProject
                 title="Crypto Screener Application"
@@ -219,7 +219,7 @@ const Projects = () => {
                 img={project1}
               />
             </div> */}
-          </div>
+          </motion.div>
         </Layout>
       </main>
     </>

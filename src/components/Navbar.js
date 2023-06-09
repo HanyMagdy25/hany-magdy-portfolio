@@ -11,6 +11,7 @@ import {
 } from "./Icons";
 import Logo from "./Logo";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
+import NameLogo from "./NameLogo";
 
 const CustomLink = ({ href, title, className = "" }) => {
   const router = useRouter();
@@ -91,6 +92,11 @@ const Navbar = () => {
           <CustomLink href="/about" title="About" className="mx-4" />
           <CustomLink href="/projects" title="Projects" className="mx-4" />
         </nav>
+
+     
+        <NameLogo />
+     
+
         <nav className="flex items-center justify-center flex-wrap">
           <motion.a
             href="https://twitter.com/hanymagdyjr"
@@ -138,7 +144,7 @@ const Navbar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col z-30 justify-between items-center
+          className="min-w-[70vw] md:min-w-[80vw] flex flex-col z-30 justify-between items-center
        fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90
         dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
         >
@@ -206,7 +212,10 @@ const Navbar = () => {
         </motion.div>
       ) : null}
 
-      <Logo />
+      {/* <Logo /> */}
+      <div className="hidden lg:flex ">
+        <NameLogo />
+      </div>
     </header>
   );
 };

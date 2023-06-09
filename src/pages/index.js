@@ -6,7 +6,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import profileImg from "../../public/images/profile/developer-pic-1.png";
-import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+// import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+// import lightBulb from "../../public/images/svgs/lightBulb.png";
 
 export default function Home() {
   return (
@@ -29,15 +30,17 @@ export default function Home() {
             <div className="w-1/2 flex flex-col items-center self-center lg:w-full lg:text-center">
               {/* <h1>Turning Vision Into Reality With Code And Design. </h1> */}
               <AnimatedText
-                text="Turning Vision Into Reality With Code And Design."
+                text="Transforming ideas into stunning digital experiences."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center 
                 lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium">
-                As a skilled full-stack developer, I am dedicated to turning
-                ideas into innovative web applications. Explore my latest
-                projects and articles, showcasing my expertise in React.js and
-                web development.
+                Passionate frontend developer specializing in creating
+                captivating digital experiences. Combining creativity and
+                technical expertise, I bring designs to life with pixel-perfect
+                precision. From responsive layouts to interactive elements, I
+                strive to deliver seamless user interactions that leave a
+                lasting impression.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
@@ -64,10 +67,10 @@ export default function Home() {
             </div>
           </div>
         </Layout>
-        <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-24 md:hidden">
+        {/* <HireMe /> */}
+        {/* <div className="absolute right-5 bottom-3 inline-block w-40 md:hidden">
           <Image src={lightBulb} alt="HanyMagdy" className="w-full h-auto" />
-        </div>
+        </div> */}
       </main>
     </>
   );

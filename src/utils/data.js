@@ -1,24 +1,34 @@
-import fadyProjectImage from "../../public/images/projects/fadyProject.png"
+import fadyProjectImage from "../../public/images/projects/fadyProject.png";
+import movixProject from "../../public/images/projects/movixProject.png";
+import edrakProject from "../../public/images/projects/edrakProject.png";
+import foodMarketProject from "../../public/images/projects/foodMarketProject.png";
 export const myWorks = [
   {
     id: 1,
-    title: "Mediacl",
-    projectLink: "/aa",
+    title: "Fady Samy Portfolio",
+    projectLink: "https://fadysamy.com/",
     imgUrl: fadyProjectImage,
-    tags: ["React js", "Tailwind", "Svelte", "SvelteKit"],
+    tags: ["React js"],
   },
   {
     id: 2,
-    title: "Fady",
-    projectLink: "/dd",
-    imgUrl: fadyProjectImage,
-    tags: ["React js", "Next js", "Svelte", "SvelteKit"],
+    title: "Edrak",
+    projectLink: "https://edrakmu.com/",
+    imgUrl: edrakProject,
+    tags: ["React js", "Redux"],
   },
   {
     id: 3,
-    title: "Mediacl 2",
-    projectLink: "/gg",
-    imgUrl: fadyProjectImage,
-    tags: ["React js", "Next js", "Tailwind"],
+    title: "Movix",
+    projectLink: "https://hanymagdy25.github.io/movix",
+    imgUrl: movixProject,
+    tags: ["React js", "Redux"],
+  },
+  {
+    id: 4,
+    title: "Food Market",
+    projectLink: "https://food-market-xqu5.vercel.app/",
+    imgUrl: foodMarketProject,
+    tags: ["React js"],
   },
 ];
