@@ -68,9 +68,9 @@ const Project = ({ type, title, img, link }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+        {/* <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
           {type}
-        </span>
+        </span> */}
         <Link
           href={link}
           target="_blank"
@@ -191,8 +191,8 @@ const Projects = () => {
               />
             </div> */}
             {filterWork?.length === 0 ? (
-              <div className="col-span-12">
-                <AnimatedText text="Imagination " className="mb-5 text-xl" />
+              <div className="col-span-12 mt-8">
+                <AnimatedText text="I haven't created a project with this yet." className="mb-5 text-xl" />
               </div>
             ) : (
               <>

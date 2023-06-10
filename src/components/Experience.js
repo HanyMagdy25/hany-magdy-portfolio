@@ -2,7 +2,7 @@ import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 import LiIcon from "./LiIcon";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ position, company, time, address }) => {
   const ref = useRef(null);
   return (
     <li
@@ -18,18 +18,13 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
       >
         <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
           {position}&nbsp;
-          <a
-            target={"_blank"}
-            href={companyLink}
-            className="text-primary capitalize"
-          >
+          <span className="text-primary capitalize dark:text-primaryDark">
             @{company}
-          </a>
+          </span>
         </h3>
         <span className="capitalize font-medium text-dark/75 dark:text-light/75 xs:text-sm">
           {time} | {address}
         </span>
-        <p className="font-medium w-full md:text-sm">{work}</p>
       </motion.div>
     </li>
   );
@@ -58,31 +53,28 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Software Engineer"
-            company={"Google"}
-            companyLink="https://www.google.com"
-            time={"2022-Present "}
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's  search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization"
+            position="Front End Developer"
+            company={"Technomasr"}
+            time={"Dec 2022 - Apr 2023"}
+            address="Mansoura, Egypt"
           />
           <Details
-            position="Software Engineer"
-            company={"Google"}
-            companyLink="https://www.google.com"
-            time={"2022-Present "}
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's  search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization"
+            position="Front End Developer"
+            company={"Software Cloud 2"}
+            time={"Aug 2022 - Nov 2022"}
+            address="Remote, KSA"
           />
           <Details
-            position="Software Engineer"
-            company={"Google"}
-            companyLink="https://www.google.com"
-            time={"2022-Present "}
-            address="Mountain View, CA"
-            work="Worked on a team responsible for developing new features for Google's  search engine, including improving the accuracy and relevance of search results and 
-          developing new tools for data analysis and visualization"
+            position="Front End Developer"
+            company={"Depax"}
+            time={"Mar 2022 - Jul 2022"}
+            address="Mansoura, Egypt"
+          />
+          <Details
+            position="Front End Developer"
+            company={"Freelance"}
+            time={"Jul 2021 - present"}
+            address="Remote"
           />
         </ul>
       </div>

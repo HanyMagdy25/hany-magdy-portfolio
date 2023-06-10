@@ -7,8 +7,7 @@ const Details = ({ place, time, info, type }) => {
   return (
     <li
       ref={ref}
-      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col
-     items-center justify-between md:w-[80%]"
+      className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col   items-start justify-between md:w-[80%]"
     >
       <LiIcon referance={ref} />
       <motion.div
@@ -16,7 +15,9 @@ const Details = ({ place, time, info, type }) => {
         whileInView={{ y: 0 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
-        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">{type}</h3>
+        <h3 className="capitalize font-bold text-2xl sm:text-xl xs:text-lg">
+          {type}
+        </h3>
         <span className="capitalize text-dark/75 font-medium dark:text-light/50 xs:text-sm">
           {time} | {place}
         </span>
@@ -34,8 +35,12 @@ const Education = () => {
   });
   return (
     <div className="my-64">
-      <h2 className="font-bold text-8xl mb-32 w-full text-center 
-      md:text-6xl xs:text-4xl md:mb-16">Education</h2>
+      <h2
+        className="font-bold text-8xl mb-32 w-full text-center 
+      md:text-6xl xs:text-4xl md:mb-16"
+      >
+        Education
+      </h2>
       <div ref={ref} className="w-[75%] mx-auto relative lg:w-[90%] md:w-full">
         <motion.div
           style={{ scaleY: scrollYProgress }}
@@ -48,7 +53,9 @@ const Education = () => {
             type="Computer Science"
             time="2017-2021"
             place="Mansoura University"
-            info="Bachelor degree In Computer Science."
+            info="Bachelor degree In Computer Science at Faculty of 
+            Computer and Information Sciences
+            "
           />
         </ul>
       </div>
