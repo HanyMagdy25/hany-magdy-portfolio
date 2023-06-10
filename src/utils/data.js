@@ -7,6 +7,7 @@ import moviesSvelteProject from "../../public/images/projects/moviesSvelteProjec
 import mahmoudProject from "../../public/images/projects/Mahmoud.png";
 import kayanProject from "../../public/images/projects/kayan.png";
 import kayanWebProject from "../../public/images/projects/kayanWeb.png";
+import popsmeProject from "../../public/images/projects/popsme.png";
 
 export const myWorks = [
   {
@@ -71,5 +72,12 @@ export const myWorks = [
     projectLink: "https://kayan-website.kayanhillscrm.com/",
     imgUrl: kayanWebProject,
     tags: ["React js","Bootstrap"],
+  },
+  {
+    id: 10,
+    title: "Pops Me",
+    projectLink: "https://popsme.co/dce93a6c",
+    imgUrl: popsmeProject,
+    tags: ["Next js"],
   },
 ];

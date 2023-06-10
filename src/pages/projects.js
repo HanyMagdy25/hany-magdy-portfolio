@@ -192,7 +192,7 @@ const Projects = () => {
             </div> */}
             {filterWork?.length === 0 ? (
               <div className="col-span-12 mt-8">
-                <AnimatedText text="I haven't created a project with this yet." className="mb-5 text-xl" />
+                <AnimatedText text="No projects yet." className="mb-5 text-xl" />
               </div>
             ) : (
               <>
