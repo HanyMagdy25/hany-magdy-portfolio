@@ -38,8 +38,9 @@ const AnimatedText = ({ text, className = "" }) => {
         variants={qoute}
         initial="initial"
         animate="animate"
-        whileInView={{ opacity: [0, 1], y: [40, 0] }}
-        transition={{ duration: 1.2 }}
+        // whileInView={{ opacity: [0, 1], y: [40, 0] }}
+        // exit={{ y: 0 }}
+        // transition={{ duration: 1.2 }}
       >
         {text?.split(" ").map((word, index) => (
           <motion.span
