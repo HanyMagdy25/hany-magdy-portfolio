@@ -64,14 +64,14 @@ export const myWorks = [
     title: "Kayan Landing Page",
     projectLink: "https://kayan-page.kayanhillscrm.com/",
     imgUrl: kayanProject,
-    tags: ["React js", "Bootstrap"],
+    tags: ["React js","Bootstrap"],
   },
   {
     id: 9,
     title: "Kayan Website",
     projectLink: "https://kayan-website.kayanhillscrm.com/",
     imgUrl: kayanWebProject,
-    tags: ["React js", "Bootstrap"],
+    tags: ["React js","Bootstrap"],
   },
   {
     id: 10,
