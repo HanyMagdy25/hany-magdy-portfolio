@@ -72,9 +72,9 @@ const Project = ({ type, title, img, link }) => {
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
-        {/* <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
+        <span className="text-xl font-medium text-primary dark:text-primaryDark lg:text-lg md:text-base">
           {type}
-        </span> */}
+        </span>
         <Link
           href={link}
           target="_blank"
@@ -87,9 +87,9 @@ const Project = ({ type, title, img, link }) => {
         <div className="w-full mt-2 flex items-center justify-between">
           <Link href={link} target="_blank">
             <button className="group flex w-full dark:text-dark dark:bg-light items-center justify-center rounded-md bg-dark px-5 py-3 text-white transition sm:mt-0 sm:w-auto ">
-              <span className="text-sm font-medium"> Visit </span>
+              <span className="text-sm font-medium">Visit</span>
               <svg
-                className="group-hover:translate-x-2 ml-3 h-5 w-5 transition-all"
+                className="group-hover:translate-x-2 ml-3 h-5 w-5 transition-all duration-200"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -209,7 +209,7 @@ const Projects = () => {
                     <Project
                       title={item.title}
                       link={item.projectLink}
-                      type="Featured Project"
+                      // type="Featured Project"
                       img={item.imgUrl}
                     />
                   </div>
