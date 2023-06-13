@@ -53,7 +53,11 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
 
 const Project = ({ type, title, img, link }) => {
   return (
-    <article className="relative flex w-full flex-col items-center justify-center rounded-2xl  rounded-br-2xl  border  border-solid  border-dark bg-light p-6  shadow-2xl dark:border-light dark:bg-dark  xs:p-4 ">
+    <article
+      className="relative flex w-full flex-col items-center justify-center 
+    rounded-2xl rounded-br-2xl border border-solid border-dark bg-light
+     p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4 "
+    >
       <div className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light  md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]  " />
       <Link
         href={link}
@@ -64,7 +68,7 @@ const Project = ({ type, title, img, link }) => {
           priority
           src={img}
           alt={title}
-          className="w-full cursor-pointer overflow-hidden rounded-lg"
+          className="w-full cursor-pointer overflow-hidden rounded-lg max-h-52 object-cover"
         />
       </Link>
       <div className="w-full flex flex-col items-start justify-between mt-4">
@@ -173,7 +177,8 @@ const Projects = () => {
           </div>
 
           <motion.div
-            className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0"
+            className="grid grid-cols-12 gap-20 xl:gap-x-16 
+            lg:gap-x-8 md:gap-y-16 sm:gap-x-0"
             animate={animateCard}
             transition={{ duration: 0.5, delayChildren: 0.5 }}
             exit={{ y: 0, opacity: 0 }}
@@ -192,7 +197,10 @@ const Projects = () => {
             </div> */}
             {filterWork?.length === 0 ? (
               <div className="col-span-12 mt-8">
-                <AnimatedText text="No projects yet." className="mb-5 text-xl" />
+                <AnimatedText
+                  text="No projects yet."
+                  className="mb-5 text-xl"
+                />
               </div>
             ) : (
               <>

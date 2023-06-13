@@ -87,6 +87,7 @@ const about = () => {
                 src={profileImage}
                 alt="Hany-Magdy"
                 className="w-full h-auto rounded-2xl"
+                priority
               />
             </div>
 
