@@ -6,7 +6,7 @@ import { useInView, useMotionValue, useSpring } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
-import profileImage from "../../assets/newprofile.jpeg";
+import profileImage from "../../public/newprofile.jpg";
 import Education from "@/components/Education";
 import TransitionEffect from "@/components/TransitionEffect";
 
